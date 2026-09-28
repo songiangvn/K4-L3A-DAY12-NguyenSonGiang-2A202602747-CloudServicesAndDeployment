@@ -22,10 +22,11 @@ services:
       - key: REDIS_URL
         fromService:
           name: day12-redis
-          type: redis
+          type: keyvalue
           property: connectionString
 
-  - type: redis
+  # Render đã đổi tên Redis thành "Key Value" (type: keyvalue)
+  - type: keyvalue
     name: day12-redis
     plan: free
     ipAllowList: []
